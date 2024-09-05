@@ -13,9 +13,9 @@ export default async function getProjectsList(req: NextApiRequest, res: NextApiR
             strictSSL: true
         });
         var asdf = await jira.listProjects()
-        // console.log(asdf)
         res.status(200).json(asdf);
     } catch (error) {
+        console.error(error)
         res.status(500).json({ error: 'Failed to fetch Jira projects' });
     }
 }
