@@ -35,3 +35,22 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Cypress related files and folders
+cypress/videos/
+cypress/screenshots/
+cypress/downloads/
+cypress/reports/
+
+# Cypress config file
+cypress.config.js
+cypress.json
+
+# Cypress example specs
+cypress/e2e/examples/
+
+# If you're using a specific environment for Cypress, like .env
+.env.cypress
+
+# Cypress coverage reports if using a code coverage plugin
+coverage/

@@ -4,7 +4,7 @@ import { DataGrid } from '@mui/x-data-grid';
 import { QueryClient, QueryClientProvider, useQuery } from '@tanstack/react-query';
 const queryClient = new QueryClient();
 
-export default function Home2() {
+export default function Home() {
 
     const { data: data1, error, isLoading } = useQuery<JiraProject[], Error>({
         queryKey: ['projects'],
@@ -27,6 +27,7 @@ export default function Home2() {
     ];
     return (
         <QueryClientProvider client={queryClient}>
+            
             <div>
                 <h1>Data from API</h1>
             </div>
