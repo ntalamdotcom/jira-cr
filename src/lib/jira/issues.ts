@@ -5,14 +5,14 @@ import JiraClient from 'jira-client';
 export default async function getLatestProjectIssue(req: NextApiRequest, res: NextApiResponse) {
     try {
         const jira = new JiraClient({
-            // protocol: 'https',
+            protocol: process.env.JIRA_PROTOCOL,
             host: process.env.JIRA_HOST as string,
             username: process.env.JIRA_EMAIL,
             password: process.env.JIRA_API_TOKEN,
             apiVersion: process.env.JIRA_API_VERSION,
             strictSSL: true
         });
-        var projectKey = "SCRUM"
+        const projectKey = "SCRUM"
         const issues = await jira.searchJira(
             `project=${projectKey} ORDER BY updated DESC`,
             {
