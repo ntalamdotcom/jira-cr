@@ -1,8 +1,6 @@
 'use client'
-// import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Image from "next/image";
-// import JiraProjectTables from "./components/jira-lister";
-// const queryClient = new QueryClient();
+
 export default function Home() {
   return (
     <>
@@ -20,8 +18,6 @@ export default function Home() {
         </div>
 
         <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-
-
           <a
             href="/page"
             className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
@@ -57,9 +53,6 @@ export default function Home() {
           </a>
         </div>
       </main>
-      {/* </QueryClientProvider> */}
-
     </>
-
   );
 }

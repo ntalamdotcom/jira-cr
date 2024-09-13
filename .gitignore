@@ -54,3 +54,6 @@ cypress/e2e/examples/
 
 # Cypress coverage reports if using a code coverage plugin
 coverage/
+
+#for npm
+# lib

@@ -1,6 +1,6 @@
 'use client';
-import ProjectsDataTable from '@/components/ProjectsDataTable';
-import { fetchJiraIssues, fetchJiraProjects } from '@/services/JiraServices';
+import ProjectsDataTable from '@/lib/components/ProjectsDataTable';
+import { fetchJiraIssues, fetchJiraProjects } from '@/lib/services/JiraServices';
 // import { DataGrid } from '@mui/x-data-grid';
 import { QueryClient, QueryClientProvider, useQuery } from '@tanstack/react-query';
 const queryClient = new QueryClient();

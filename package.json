@@ -1,8 +1,11 @@
 {
   "name": "jiracr",
-  "version": "0.1.1",
-  "private": true,
+  "version": "0.1.3",
+  "private": false,
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
+    "build:lib": "tsc -p tsconfig.lib.json",
     "predev": "ts-node validate-env.ts",
     "dev": "next dev",
     "prebuild": "ts-node validate-env.ts",
