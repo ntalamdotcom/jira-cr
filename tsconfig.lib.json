@@ -1,13 +1,18 @@
 {
     "compilerOptions": {
-        "outDir": "./lib/dist", // The output directory for compiled library code
+        "outDir": "./dist", // The output directory for compiled library code
         "module": "commonjs",
         "target": "es6",
         "declaration": true,
         "sourceMap": true,
-        "strict": true
+        "strict": true,
+        "esModuleInterop": true,
+        "moduleResolution": "node",
+        "jsx": "react",          // Enable JSX with React (use "react-jsx" if using React 17+)
+
     },
     "include": [
         "src/lib/**/*"
-    ]
+    ],
+    "exclude": ["node_modules"]
 }

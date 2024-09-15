@@ -21,7 +21,7 @@ interface JiraIssues {
     maxResults: number;
     total: number;
     issues: Issue[];
-};
+}
 
 // Define the Issue type
 type Issue = {

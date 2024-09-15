@@ -1,3 +1,4 @@
+import React from 'react';
 import { DataGrid } from "@mui/x-data-grid";
 export default function ProjectsDataTable(params: { data: JiraProject[] | undefined }) {
     const { data } = params
