@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+        "baseUrl": ".",
         "outDir": "./dist", // The output directory for compiled library code
         "module": "commonjs",
         "target": "es6",
@@ -7,12 +8,27 @@
         "sourceMap": true,
         "strict": true,
         "esModuleInterop": true,
-        "moduleResolution": "node",
-        "jsx": "react",          // Enable JSX with React (use "react-jsx" if using React 17+)
-
+        "moduleResolution": "node", // Generate declaration files
+        "declarationDir": "./dist/types",
+        "jsx": "react",
+        "paths": {
+            "@services/*": [
+                "dist/services/*"
+            ], // Alias for services folder
+            "@jira/*": [
+                "dist/jira/*"
+            ], // Alias for jira folder
+            "@components/*": [
+                "dist/components/*"
+            ] // Alias for components folder
+        }
+        // Enable JSX with React (use "react-jsx" if using React 17+)
     },
     "include": [
-        "src/lib/**/*"
+        "src/lib/**/*",
+        "src/index.ts"
     ],
-    "exclude": ["node_modules"]
+    "exclude": [
+        "node_modules"
+    ]
 }
